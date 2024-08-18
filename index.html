@@ -44,9 +44,46 @@
     <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12.0/mvp.css" media="print" onload="this.media='all'">
 </head>
     
-<body>
+<body onLoad="getPrices(billingCycle)">
     <h1>Welcome to My Webpage</h1>
-    <p>This is a simple webpage hosted on GitHub Pages. Updated 5</p>
+    <p>This is a simple webpage hosted on GitHub Pages. Updated 6</p>
+
+      <div class="pricing-page-container">
+        <h1>Choose your plan</h1>
+        <div class="pricing-toggle">
+          <input type="radio" name="plan" value="month" id="month" onclick="getPrices('month')"><label for="month">Monthly</label>
+          <input type="radio" name="plan" value="year" id="year" onclick="getPrices('year')" checked><label for="year">Yearly  <sup>save 20%</sup></label>
+        </div>
+        <div class="pricing-grid">
+          <div class="starter-plan">
+            <h3>Starter</h3>
+            <p id="starter-price">$100.00</p>
+            <p><small>per user</small></p>
+            <button>Sign up now</button>
+          </div>
+          <div class="pro-plan">
+            <h3>Pro</h3>
+            <p id="pro-price">$300.00</p>
+            <p><small>per user</small></p>
+            <button>Sign up now</button>
+          </div>
+          <div class="enterprise-plan">
+            <h3>Enterprise</h3>
+            <p>Contact us</p>
+            <p><small>bespoke pricing</small></p>
+            <button>Inquire now</button>
+          </div>
+        </div>
+        <div class="country-selector">
+          <select name="country" id="country" autocomplete="off">
+            <option value="US">🇺🇸 United States</option>
+            <option value="GB">🇬🇧 United Kingdom</option>
+            <option value="ES">🇪🇸 Spain</option>
+            <option value="IN">🇮🇳 India</option>
+            <option value="US">🌍 Other</option>
+          </select>
+        </div>
+      </div>
 </body>
 
 <script type="text/javascript">
