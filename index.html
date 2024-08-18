@@ -11,7 +11,7 @@
     
 <body>
     <h1>Welcome to My Webpage</h1>
-    <p>This is a simple webpage hosted on GitHub Pages. Updated 4</p>
+    <p>This is a simple webpage hosted on GitHub Pages. Updated 5</p>
 </body>
 
 <script type="text/javascript">
@@ -43,6 +43,14 @@
     var request = {
       items: itemsList
     }
+    Paddle.PricePreview(request)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
     
 </script>    
 
